@@ -9,6 +9,8 @@ int main()
         cout<<a[i]<<" ";
     }
     cout<<endl;
+    cout<<a.capacity()<<endl;
+    cout<<a.size()<<endl;
     cout<<a.front()<<endl;
     cout<<a.back()<<endl;
      sort(a.begin(), a.end());
