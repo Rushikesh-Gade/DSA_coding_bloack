@@ -1,39 +1,27 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
-int decimal(int n){
-	int temp=n,l=0,dec=1;
-	while(temp!=0){
-		temp=temp/10;
-		l++;
-	}
-	int arr[l];
-	for(int i=0 ;i<l;i++){
-		int remain=n%10;
-		arr[i]=remain;
-		n=n/10;
-	}
-	for(int i=l-2;i>=0;i--){
-		if(arr[i]==0){
-			dec=dec*2;
-		}
-		else{
-			dec=dec*2+1;
-		}
-	}
-	return dec;
 
-}
 int main() {
-	int m;
-	cin>>m;
-	int arr[m];
-	for(int i=0;i<m;i++){
-		cin>>arr[i];
-	}
-	for(int i=0;i<m;i++){
-		int n=arr[i];
-		int number = decimal(n);
-		cout<<number<<endl;
-	}
-	return 0;
+    int t;
+    cin >> t;
+
+    while(t--) {
+        long long n;
+        cin >> n;
+
+        int decimal = 0;
+        int power = 0;
+
+        while(n > 0) {
+            int digit = n % 10;
+            decimal += digit * pow(2, power);
+            power++;
+            n = n / 10;
+        }
+
+        cout << decimal << endl;
+    }
+
+    return 0;
 }
