@@ -31,19 +31,19 @@ int main(){
     vector<vector<int>> a(N, vector<int>(M));
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
-            cin>>a[j][i];
+            cin>>a[i][j];
         }
     }
     
-    for(int i=0; i<M; i++){
-        if(i%2==0){
-        for(int j=0; j<N; j++){
-            cout<<a[j][i]<<", ";
+    for(int j=0; j<M; j++){
+        if(j%2==0){
+        for(int i=0; i<N; i++){
+            cout<<a[i][j]<<", ";
         }
          }
          else{
-            for(int j=N-1; j>=0; j--){
-                cout<<a[j][i]<<", ";
+            for(int i=N-1; i>=0; i--){
+                cout<<a[i][j]<<", ";
             }
          }
          
