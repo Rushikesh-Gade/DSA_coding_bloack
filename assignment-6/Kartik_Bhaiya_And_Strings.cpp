@@ -24,49 +24,43 @@
 
 #include<iostream>
 #include<string>
+#include<algorithm>
 using namespace std;
 int main() {
-	int k,n=1,m=1;
+	int k,n=0,m=0;
 	cin>>k;
 	string s;
 	cin>>s;
 
-		for(int i=0; i<s.size(); i++){
-
-			    if(k>0 && s[i]=='a'){
-				s[i]='b';
-				k--;
-				
+	int i=0,cnt=0;
+	for(int j=0; j<(int)s.size(); j++){
+		if(s[j]!='a'){
+			cnt++;
+		}
+		while(cnt>k){
+			if(s[i]!='a'){
+				cnt--;
 			}
+			i++;
 		}
-	
-	for(int i=1; i<s.size(); i++){
-		if(s[i]=s[i-1]){
-			n++;
-		}
-		else{
-			break;
-		}
+		n=max(n,j-i+1);
 	}
 
-			for(int i=0; i<s.size(); i++){
-
-			    if(k>0 && s[i]=='b'){
-				s[i]='a';
-				k--;
-				
+	i=0;
+	cnt=0;
+	for(int j=0; j<(int)s.size(); j++){
+		if(s[j]!='b'){
+			cnt++;
+		}
+		while(cnt>k){
+			if(s[i]!='b'){
+				cnt--;
 			}
+			i++;
 		}
-	
-	for(int i=1; i<s.size(); i++){
-		if(s[i]==s[i-1]){
-			m++;
-		}
-		else{
-			break;
-			
-		}
+		m=max(m,j-i+1);
 	}
+
 	if(n>=m){
 	cout<<n;
 	}
