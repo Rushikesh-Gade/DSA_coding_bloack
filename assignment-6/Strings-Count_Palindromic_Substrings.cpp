@@ -31,7 +31,26 @@ using namespace std;
 int main() {
 	string s;
 	getline(cin, s);
-	
-	cout<<s.size();
+	int n=s.size();
+	int ans=0;
+
+	for(int i=0; i<n; i++){
+		int l=i,r=i;
+		while(l>=0 && r<n && s[l]==s[r]){
+			ans++;
+			l--;
+			r++;
+		}
+
+		l=i;
+		r=i+1;
+		while(l>=0 && r<n && s[l]==s[r]){
+			ans++;
+			l--;
+			r++;
+		}
+	}
+
+	cout<<ans;
 	return 0;
 }
