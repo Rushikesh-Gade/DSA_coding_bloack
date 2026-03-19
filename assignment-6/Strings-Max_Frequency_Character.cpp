@@ -48,7 +48,7 @@ int main() {
             n++;
 			if(n>m){
 				c=s[i];
-				n=m;
+				m=n;
 			}
          }
 		  else{ 
