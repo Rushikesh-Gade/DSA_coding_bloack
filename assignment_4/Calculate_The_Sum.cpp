@@ -1,37 +1,29 @@
 #include<iostream>
 using namespace std;
-void fullarr(int arr[],int n,int a){
-	int brr[n];
-	 for(int i=0;i<n;i++){
-		 int s=i-a;
-	if(i-a<0){
-		s=n-i-a;
+
+int main() {
+	const long long mod = 1000000007LL;
+	int n;
+	cin >> n;
+
+	long long sum = 0;
+	for (int i = 0; i < n; i++) {
+		long long x;
+		cin >> x;
+		sum = (sum + x) % mod;
 	}
-		 brr[i]=arr[i]+arr[s];
-	 }
-	 for(int i=0;i<n;i++){
-		 arr[i]=brr[i];
-	 }
-	 
-}
-int main() { 
-	int n,a,sum=0;
-	cin>>n;
-	int arr[n];
-	for(int i=0;i<n;i++){
-		cin>>arr[i];
-	}
+
 	int no;
-	cin>>no;
-	for(int i=0;i<no;i++){
-		cin>>a;
-		fullarr(arr,n,a);
-
+	cin >> no;
+	for (int i = 0; i < no; i++) {
+		int a;
+		cin >> a;
 	}
-	for(int i=0;i<n;i++){
-		sum=sum+arr[i];
-	}
-	cout<<sum<<endl;
 
+	while (no--) {
+		sum = (sum * 2) % mod;
+	}
+
+	cout << sum << endl;
 	return 0;
 }
