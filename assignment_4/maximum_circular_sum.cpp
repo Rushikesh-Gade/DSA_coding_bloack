@@ -29,19 +29,53 @@
 
 #include<iostream>
 using namespace std;
-int main() {
-	int n,t;
-	cin>>t;
-	cin>>n;
-	int arr[n];
-	for(int i=0;i<n;i++){
-		cin>>arr[i];
+
+int kadaneMax(int arr[], int n) {
+	int cur = arr[0], best = arr[0];
+	for (int i = 1; i < n; i++) {
+		cur = max(arr[i], cur + arr[i]);
+		best = max(best, cur);
 	}
-int sum=0;
-	for(int i=0; i<n; i++){
-		sum+=arr[i];
+	return best;
+}
+
+int kadaneMin(int arr[], int n) {
+	int cur = arr[0], best = arr[0];
+	for (int i = 1; i < n; i++) {
+		cur = min(arr[i], cur + arr[i]);
+		best = min(best, cur);
+	}
+	return best;
+}
+
+int main() {
+	int t;
+	cin >> t;
+	while (t--) {
+		int n;
+		cin >> n;
+		int arr[n];
+		int total = 0;
+
+		for (int i = 0; i < n; i++) {
+			cin >> arr[i];
+			total += arr[i];
+		}
+
+		int normalMax = kadaneMax(arr, n);
+		int minSub = kadaneMin(arr, n);
+		int circularMax = total - minSub;
+
+		if (normalMax < 0) {
+			cout << normalMax;
+		} else {
+			cout << max(normalMax, circularMax);
+		}
+
+		if (t) {
+			cout << "\n";
+		}
 	}
 
-	cout<<sum;
 	return 0;
 }
