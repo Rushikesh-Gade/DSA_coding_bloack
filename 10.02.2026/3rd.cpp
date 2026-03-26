@@ -1,24 +1,20 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
+#include <iostream>
 using namespace std;
 int main()
 {
-    vector<int>a={1,2,8,4,5};
-    for( int i=0;i<a.size();i++){
-        cout<<a[i]<<" ";
-    }
-    cout<<endl;
-    cout<<a.capacity()<<endl;
-    cout<<a.size()<<endl;
-    cout<<a.front()<<endl;
-    cout<<a.back()<<endl;
-     sort(a.begin(), a.end());
-    reverse(a.begin(),a.end());
-   
-    a.insert(a.end()-1,6);
-    for( int i=0;i<a.size();i++){
-        cout<<a[i]<<" ";
-    }
+int arr[10] = {10, 20, 30, 40};
+int n = 4;
+// int position = 2;
+int value = 25;
+for(int i = n; i > 2; i--)
+{
+arr[i] = arr[i-1];
+}
+arr[2] = value;
+n++;
+for(int i = 0; i < n; i++)
+{
+cout << arr[i] << " ";
+}
 return 0;
 }
