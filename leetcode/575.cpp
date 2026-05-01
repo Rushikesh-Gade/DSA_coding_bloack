@@ -7,6 +7,8 @@ class Solution {
 public:
     int distributeCandies(vector<int>& candyType) {
         set<int>kiti (candyType.begin(),candyType.end());
-        return kiti.size();
+        int jastitjast = candyType.size()/2;
+        return min((int)kiti.size(),jastitjast);
+       
     }
 };
