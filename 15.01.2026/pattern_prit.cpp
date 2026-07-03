@@ -8,6 +8,6 @@ int main()
     {
         cout << "*";
     }
-
+// hded
     return 0;
 }
