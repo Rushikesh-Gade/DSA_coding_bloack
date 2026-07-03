@@ -8,6 +8,6 @@ int main()
     {
         cout << "*";
     }
-// hdedn
+// end
     return 0;
 }
