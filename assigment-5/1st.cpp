@@ -16,7 +16,7 @@
 // Sample Output
 // 1 1
 // 1 0
-// kk
+
 #include<iostream>
 #include<vector>
 using namespace std;
