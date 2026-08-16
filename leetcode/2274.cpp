@@ -1,15 +1,16 @@
 class Solution {
 public:
-    int maxWidthOfVerticalArea(vector<vector<int>>& points) {
-        vector<int>x;
-        for(auto p:points){
-            x.push_back(p[0]);
-        }
-        sort(x.begin(),x.end());
+    int maxConsecutive(int bottom, int top, vector<int>& special) {
+        sort(special.begin(),special.end());
         int ans=0;
-        for(int i=1;i<x.size();i++){
-            ans=max(ans,x[i]-x[i-1]);
+        // pehla gap
+        ans=max(ans,special[0]-bottom);
+        for(int i=1;i<special.size();i++){
+            //special floor me ka gap
+            ans=max(ans,special[i]-special[i-1]-1);
         }
-    return ans;
+        //last ka gap
+        ans=max(ans,top-special.back());
+        return ans;
     }
 };
