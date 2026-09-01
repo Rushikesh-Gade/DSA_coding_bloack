@@ -1,5 +1,7 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
+using namespace std;
+
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
@@ -18,7 +20,7 @@ public:
 };
 int main() {
     Solution s;
-    std::vector<int> nums = {0, 1, 0, 3, 12};
+   vector<int> nums = {0, 1, 0, 3, 12};
     s.moveZeroes(nums);
     for (int i : nums) {
         std::cout << i << " ";
