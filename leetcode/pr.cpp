@@ -9,11 +9,9 @@ public:
         
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] != 0) {
-                nums[j++] = nums[i];
-            }
-        }
-        for (j=0;j < nums.size(); j++) {
-            nums[j] = 0;
+                swap(nums[i], nums[j]);
+                j++;
+            }jnj
         }
     }
 
