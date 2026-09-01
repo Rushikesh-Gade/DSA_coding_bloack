@@ -12,7 +12,7 @@ public:
                 nums[j++] = nums[i];
             }
         }
-        for (int j=0;j < nums.size(); j++) {
+        for (;j < nums.size(); j++) {
             nums[j] = 0;
         }
     }
@@ -20,10 +20,10 @@ public:
 };
 int main() {
     Solution s;
-   vector<int> nums = {0, 1, 0, 3, 12};
+    vector<int> nums = {0, 1, 0, 3, 12};
     s.moveZeroes(nums);
     for (int i : nums) {
-        std::cout << i << " ";
+        cout << i << " ";
     }
     return 0;
 }
