@@ -9,7 +9,7 @@ class Node {
 int main() {
     Node* first = new Node();
     first->data = 100;
-    // first->next = NULL;
+    first->next = NULL;
     Node* second = new Node();
     second->data = 200;
     second->next = NULL;
