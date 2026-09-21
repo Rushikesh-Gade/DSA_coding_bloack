@@ -12,7 +12,7 @@ int main() {
     // first->next = NULL;
     Node* second = new Node();
     second->data = 200;
-    // second->next = NULL;
+    second->next = NULL;
     first->next = second;
     Node* third = new Node();
     third->data = 300;
