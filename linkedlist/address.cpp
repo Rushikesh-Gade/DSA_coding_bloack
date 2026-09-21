@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int a = 10;          // integer variable
-    int* ptr = &a;       // pointer storing the address of 'a'
+    int a = 10;          
+    int* ptr = &a;       
 
     cout << "Address of a: " << &a << endl;
     cout << "Value of ptr (address of a): " << ptr << endl;
