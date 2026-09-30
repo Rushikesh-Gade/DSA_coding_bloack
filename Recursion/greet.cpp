@@ -13,7 +13,7 @@ void fun(int n) {
     fun(n-1);
     
     cout << n << " ";
-    cout <<" hello" << endl;
+    // cout <<" hello" << endl;
     
     
 }
