@@ -1,19 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
-void greet(int n);
+int sum(int n);
 int main() {
-    greet(5);
-    int sum = 0;
+    int sum = sum(5);
     cout << "Sum: " << sum << endl;
+    return 0;
 }
-void greet(int n) {
-    static int sum = 0;
+int sum(int n) {
     if(n == 0) {
-        return;
+        return 0;
     }
-    
-    sum += n;
-    greet(n-1);
-    cout << n << " ";
-    cout << "Sum: " << sum << endl;
-} 
+    return n + sum(n-1);
+}

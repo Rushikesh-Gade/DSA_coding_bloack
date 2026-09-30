@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 void greet(int n);
+int sum(int n);
 int main() {
     greet(5);
-    int sum = 0;
+    int sum = sum(5);
     cout << "Sum: " << sum << endl;
 }
 void greet(int n) {
