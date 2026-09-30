@@ -9,7 +9,6 @@ void greet(int n) {
         return;
     }
     cout << n << endl;
-    cout <<" hello" << endl;
     greet(n-1);
     
-}
+} 
