@@ -1,3 +1,1 @@
-if(n == 0) {
-    //     return;
-    // }
+cout << "Sum: " << sum << endl;
