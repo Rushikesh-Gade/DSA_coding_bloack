@@ -8,10 +8,11 @@ void fun(int n) {
     if(n == 0) {
         return;
     }
-    cout << n << endl;
+    // cout << n << endl;
     
     fun(n-1);
-    cout <<" hello" << endl;
+    // cout <<" hello" << endl;
+    cout << n << endl;
     
     
 }
