@@ -15,6 +15,6 @@ void greet(int n) {
     
     greet(n-1);
     cout << n << " ";
-    cout << "Sum: " << sum << endl;
+    cout << "Sum=> " << sum << endl;
     
 } 
