@@ -12,7 +12,7 @@ void greet(int n) {
         return;
     }
     cout << n << " ";
-    sum += n;
+    
     greet(n-1);
-    // cout << n << " ";
+    cout << n << " ";
 } 
