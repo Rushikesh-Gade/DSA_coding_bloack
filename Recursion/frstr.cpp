@@ -11,8 +11,9 @@ void greet(int n) {
     if(n == 0) {
         return;
     }
-    cout << n << " ";
+    // cout << n << " ";
     
     greet(n-1);
     cout << n << " ";
+    sum += n;
 } 
