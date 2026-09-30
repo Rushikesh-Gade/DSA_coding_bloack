@@ -11,7 +11,7 @@ void fun(int n) {
     cout << n << endl;
     
     fun(n-1);
-    // cout <<" hello" << endl;
+    cout <<" hello" << endl;
     cout << n << endl;
     
     
