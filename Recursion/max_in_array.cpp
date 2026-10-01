@@ -1,9 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void maxelement(int i,int arr[],int n){
+int maxelement(int i,int arr[],int n){
     if(i==n-1){
-        return;
+        return arr[i];
     }
-    r
+    int ans = maxelement(i+1,arr,n);
+    return max(arr[i],ans);
+    
+}
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<"max jo hai"<<maxelement(0,arr,n)<<endl;
+    return 0;
 }
