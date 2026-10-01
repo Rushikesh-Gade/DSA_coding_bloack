@@ -3,7 +3,7 @@ using namespace std;
 
 bool issortd(int i,int arr[],int n){
     if(i==n){
-        return;
+        return 0;
     }
     if(i<i+1){
         return true;
