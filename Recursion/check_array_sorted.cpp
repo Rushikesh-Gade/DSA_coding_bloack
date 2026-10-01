@@ -5,6 +5,7 @@ void issortd(int i,int arr[],int n){
     if(i==n){
         return;
     }
+    if(i)
 
 }
 int main(){
