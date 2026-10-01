@@ -20,6 +20,10 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    issortd(0,arr,n);
+    if(issortd(0,arr,n)){
+        cout<<"sorted";
+    }else{
+        cout<<"not sorted";
+    }
     return 0;
 }
