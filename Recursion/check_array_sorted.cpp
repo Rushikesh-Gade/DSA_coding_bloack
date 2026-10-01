@@ -1,11 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void issortd(int i,int arr[],int n){
+bool issortd(int i,int arr[],int n){
     if(i==n){
         return;
     }
-    if(i)
+    if(i<i+1){
+        return true;
+    }else{
+        return false;
+    }
+    issortd(i+1,arr,n);
 
 }
 int main(){
