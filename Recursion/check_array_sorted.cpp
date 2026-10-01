@@ -5,9 +5,7 @@ bool issortd(int i,int arr[],int n){
     if(i==n-1){
         return true;
     }
-    if(arr[i]<arr[i+1]){
-        return true;
-    }else{
+    if(arr[i]>arr[i+1]){
         return false;
     }
     issortd(i+1,arr,n);
